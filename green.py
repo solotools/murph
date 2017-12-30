@@ -32,4 +32,4 @@ def daily_commit(start_date, end_date):
 
 
 if __name__ == '__main__':
-    daily_commit(datetime.date(2019, 5, 22), datetime.date(2019, 6, 27))  # 第一个参数为开始日期（小绿点表格左上），第二个结束日期（小绿点表格右下）
+    daily_commit(datetime.date(2017, 12, 29), datetime.date(2018, 7, 17))  # 第一个参数为开始日期（小绿点表格左上），第二个结束日期（小绿点表格右下）
