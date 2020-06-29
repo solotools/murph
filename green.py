@@ -5,10 +5,10 @@ import os
 
 
 def modify():
-    file = open('G:\murph\README.md', 'r')  # 第一个参数改为zero.md所在的路径
+    file = open('G:\murph\zero.md', 'r')  # 第一个参数改为zero.md所在的路径
     flag = int(file.readline()) == 0
     file.close()
-    file = open('G:\murph\README.md', 'w+')
+    file = open('G:\murph\zero.md', 'w+')
     if flag:
         file.write('1')
     else:
