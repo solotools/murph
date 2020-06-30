@@ -1,6 +1,6 @@
 import datetime
 import os
-
+import random
 
 from common.make_data import data_create
 
@@ -27,9 +27,9 @@ def trick_commit(year, month, day):
 
 def daily_commit(start_date, end_date):
     for i in range((end_date - start_date).days + 1):
-        cur_date = start_date + datetime.timedelta(days=i)
+        cur_date = start_date + datetime.timedelta(days=int('{}'.format(random.randint(1, 5))))
         trick_commit(cur_date.year, cur_date.month, cur_date.day)
 
 
 if __name__ == '__main__':
-    daily_commit(datetime.date(2017, 6, 16), datetime.date(2017, 12, 30))  # 第一个参数为开始日期（小绿点表格左上），第二个结束日期（小绿点表格右下）
+    daily_commit(datetime.date(2019, 5, 22), datetime.date(2019, 7, 27))  # 第一个参数为开始日期（小绿点表格左上），第二个结束日期（小绿点表格右下）
