@@ -1,23 +1,18 @@
 import datetime
 import os
 
-# from heavy import special_commit
+
+from common.make_data import data_create
 
 
 def modify():
-    file = open('G:\murph\zero.md', 'r')  # 第一个参数改为zero.md所在的路径
-    flag = int(file.readline()) == 0
+    file = open(r'data/ADDRESS.md', "a+", encoding="utf-8")
+    file.write(data_create(1) + '\n')
     file.close()
-    file = open('G:\murph\zero.md', 'w+')
-    if flag:
-        file.write('1')
-    else:
-        file.write('0')
-        file.close()
 
 
 def commit():
-    os.system('git commit -a -m "test"')
+    os.system('git commit -a -m "{} add address"'.format(data_create(2)))
 
 
 def set_sys_time(year, month, day):
